@@ -1,0 +1,105 @@
+/* === Variables Declaration === */
+
+:root {
+    --dark-color: black;
+}
+
+
+/*  Universal selector * refers to all elements */
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-size: 0.8rem ; /* 1 rem = 16 px */
+}
+
+
+.container-fluid {
+    padding: 40px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* === Searcher ===  */
+
+.search {
+    position: relative;
+}
+
+.search svg {
+    position: absolute;
+    right: -10px;
+    padding: 10px 12px;
+    pointer-events: none;
+    height: auto;
+    width: 20px;
+    top: 1px;
+    right: 3px;
+
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    border: solid 2px var(--dark-color);
+    border-radius: 5px;
+    padding: 0 15px 0 20px;
+
+}
+
+/* === Items List ===  */
+
+ul, #numb-results{
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+
+.item a {
+    display: flex;
+    align-items: center;
+    color: var(--dark-color);
+    padding: 0 10px;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    text-decoration: none;
+}
+
+.item img {
+    padding-right: 10px;
+}
+
+.item h1 {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.item p {
+    margin-top: 10px;
+}
+
+/* === Items Effect === */
+
+.item:hover {
+    background-color: rgb(236, 236, 236);
+
+}
+
+.item:hover h1,
+.item:hover p {
+    color: grey;
+}
+
+.item:hover h1 {
+    text-decoration: underline;
+}
+
