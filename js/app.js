@@ -18,6 +18,8 @@ searchBar.addEventListener("keyup", (e) => {
                                                                 looking for starting from the beginning of the title*/
 
   });
+
+
   
   inputValidation(e,filteredItems);
 
@@ -25,18 +27,19 @@ searchBar.addEventListener("keyup", (e) => {
 
 /* === Validator ===  */
 
-function inputValidation(e,filteredItems){
+function inputValidation(e,filteredItems){    
   if (e.target.value !== "" && filteredItems.length > 0) {
-   
+  
     searchBar.style.borderColor = "green";
     svgSearch.style.fill = "green";
-    
+
     displayItems(filteredItems); //Pass items filter to be displayed
     numbResult(e,filteredItems);  
 
-  } else if(filteredItems.length == 0){
+  } else if(filteredItems.length === 0){
     //add class
-    searchBar.style.borderColor = "red";
+    numbResult(e,filteredItems); 
+    searchBar.style.borderColor = "red";    
     svgSearch.style.fill = "red";
     itemsList.innerHTML = "";
 
